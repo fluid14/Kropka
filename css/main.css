@@ -344,7 +344,7 @@ p {
   .header__nav {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 0 50px;
+    padding: 0 0 0 50px;
   }
   .header__nav .header__logo {
     height: 45%;
@@ -354,7 +354,7 @@ p {
   }
   .header__nav .header__menu-desktop {
     display: block;
-    margin: 0 40px;
+    margin-left: 40px;
   }
   .header__nav .header__menu-desktop .header__list {
     display: inline-block;
@@ -660,6 +660,13 @@ p {
 }
 
 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   text-align: center;
   color: #fff;
@@ -680,7 +687,7 @@ p {
   background-color: #fff;
 }
 
-.contact__details {
+.contact__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -688,57 +695,99 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  height: 50%;
-  width: 100%;
-  padding: 20px;
-  border: 2px solid white;
 }
 
-.contact__details .contact__social {
+.contact__container .contact__details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 80vw;
+  height: 100%;
+  text-align: left;
+  line-height: 130%;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  border: 2px solid #fff;
+}
+
+.contact__container .contact__details .contact__logo {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.contact__container .contact__details .contact__data {
+  line-height: 150%;
+}
+
+.contact__container .contact__form {
+  width: 100%;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.contact__container .contact__form .contact__input {
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin: 10px 0;
+  border: 0;
+  padding: 5px;
+  border-radius: 1px;
+}
+
+.contact__container .contact__form .contact__input:focus {
+  border: none;
+}
+
+.contact__container .contact__form .contact__input-text {
+  width: 100%;
+  height: 150px;
   margin-bottom: 20px;
 }
 
-.contact__details a {
+.contact__container .contact__form .contact__input-text:focus {
+  border: none;
+}
+
+.contact__container .contact__form .contact__submit {
   width: 50%;
-  text-decoration: none;
+  height: 30px;
+  padding: 0 10px;
+  background-color: #95e1d3;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
   color: #fff;
+  border: 2px solid #fff;
 }
 
-.contact__details a .contact__facebook {
-  width: 43%;
-}
-
-.contact__details a .contact__logo-social {
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
-}
-
-.contact__details a:hover .contact__logo-social {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.contact__details a .contact__allegro {
-  width: 40%;
-}
-
-.contact p {
-  line-height: 130%;
-}
-
-@media screen and (min-width: 1023px) {
-  .contact__details {
-    border: none;
+@media screen and (min-width: 767px) {
+  .contact__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact__container .contact__details {
+    width: 40%;
+    max-width: 40vw;
+    margin: 10px auto 0 auto;
+    padding: 20px;
+  }
+  .contact__container .contact__details .contact__logo {
+    width: 30%;
+    margin-bottom: 10px;
+  }
+  .contact__container .contact__form {
+    width: 40%;
+    max-width: 40vw;
   }
 }
 
@@ -746,12 +795,13 @@ p {
   width: 100%;
   height: 30px;
   background-color: #95e1d3;
-  padding-left: 20px;
 }
 
 .footer p {
+  display: inline-block;
   font-size: 10px;
   line-height: 30px;
   color: #fff;
+  margin-left: 20px;
 }
 /*# sourceMappingURL=main.css.map */

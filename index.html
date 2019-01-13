@@ -28,6 +28,7 @@
                 <li class="header__list"><a href="#shop" class="header__list-item">Nasze sklepy</a></li>
                 <li class="header__list"><a href="#contact" class="header__list-item">Kontakt</a></li>
                 <li class="header__list"><a href="allegro.pl" class="header__list-item">Allegro</a></li>
+                <li class="header__list"><a href="allegro.pl" class="header__list-item">Facebook</a></li>
             </ul>
         </nav>
         <p class="header__paragraf">Twój sklep papierniczy</p>
@@ -42,6 +43,7 @@
             <li class="mobile-menu__list"><a href="#shop" class="mobile-menu__list-item">Nasze sklepy</a></li>
             <li class="mobile-menu__list"><a href="#contact" class="mobile-menu__list-item">Kontakt</a></li>
             <li class="mobile-menu__list"><a href="allegro.pl" class="mobile-menu__list-item">Allegro</a></li>
+            <li class="mobile-menu__list"><a href="allegro.pl" class="mobile-menu__list-item">Facebook</a></li>
         </ul>
     </section>
     <section class="about" id="about">
@@ -160,18 +162,25 @@
     <section class="contact" id="contact">
         <h2 class="contact__paragraf-name paragraf-name">Kontakt</h2>
         <span class="contact__decor decor"></span>
-        <div class="contact__details container">
-            <div class="contact__social">
-                <a href="facebook.com"><img src="./images/facebook-logo.png" alt="link allegro facebook" class="contact__facebook contact__logo-social"></a>
-                <a href="allegro.pl"><img src="./images/allegro-logo.png" alt="link allegro logo" class="contact__allegro contact__logo-social"></a>
+        <div class="contact__container">
+            <div class="contact__details">
+                <img src="./images/logo.png" alt="logo Kropka" class="contact__logo">
+                <p class="contact__data">Tel: 888888888</p>
+                <p class="contact__data">E-mail: kropkasklep@gmail.com</p>
+                <p class="contact__data">NIP: 99933392</p>
+                <p class="contact__data">REGON: 928384992</p>
             </div>
-            <p class="contact__data">Tel: 888888888</p>
-            <p class="contact__data">E-mail: kropkasklep.pl@gmail.com</p>
-            <p class="contact__data">NIP: 99933392</p>
-            <p class="contact__data">REGON: 928384992</p>
+            <form class="contact__form" action="https://formspree.io/jdolata5+ft@gmail.com" method="POST">
+                <input class="contact__input" type="email" placeholder="Twój email" name="E-mail: ">
+                <input class="contact__input" type="text" placeholder="Tytuł wiadomości" name="Tytuł wiadomości: ">
+                <textarea class="contact__input contact__input-text" placeholder="Treść wiadomości" type="text" rows="4"
+                    cols="50" name="Wiadomość: "></textarea>
+                <input class="contact__submit" type="submit" value="Wyślij wiadomość">
+            </form>
         </div>
     </section>
     <footer class="footer">
+        <p>2019 © Kropka All rights reserved</p>
         <p>Created by Jakub Dolata</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

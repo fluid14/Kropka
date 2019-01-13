@@ -1,39 +1,74 @@
 .contact
+    display: flex
+    flex-direction: column
     width: 100%
     text-align: center
     color: $color-font-second
     background-color: $second-color
     &__decor
         +decor(0, #fff)
-    &__details
+    &__container
         display: flex
         flex-direction: column
-        align-items: flex-start
-        height: 50%
-        width: 100%
-        padding: 20px
-        border: 2px solid white
-        .contact__social
+        .contact__details
             display: flex
-            flex-direction: row
-            margin-bottom: 20px
-        a
-            width: 50%
-            text-decoration: none
-            color: $color-font-second
-            .contact__facebook
-                width: 43%
-            .contact__logo-social
-                transition: .2s linear
-            &:hover .contact__logo-social
-                transform: scale(1.05)
-            .contact__allegro
-                width: 40%
-    p
-        line-height: 130%
+            flex-direction: column
+            justify-content: center
+            width: 100%
+            max-width: 80vw
+            height: 100%
+            text-align: left
+            line-height: 130%
+            margin: 0 auto 20px auto
+            padding: 10px
+            border: 2px solid #fff
+            .contact__logo
+                width: 50%
+                margin-bottom: 10px
+            .contact__data
+                line-height: 150%
+        .contact__form
+            width: 100%
+            max-width: 80vw
+            margin: 0 auto
+            .contact__input
+                display: block
+                width: 100%
+                height: 20px
+                margin: 10px 0
+                border: 0 
+                padding: 5px
+                border-radius: 1px
+                &:focus
+                    border: none
+                &-text
+                    width: 100%
+                    height: 150px
+                    margin-bottom: 20px
+                    &:focus
+                        border: none
+            .contact__submit
+                width: 50%
+                height: 30px
+                padding: 0 10px
+                background-color: $second-color
+                font-family: $main-font
+                text-transform: uppercase
+                color: $color-font-second
+                border: 2px solid #fff
 
-
-@media screen and (min-width: $md-min)
+@media screen and (min-width: $sm-min)
     .contact
-        &__details
-            border: none
+        &__container
+            flex-direction: row
+            .contact__details
+                width: 40%
+                max-width: 40vw
+                margin: 10px auto 0 auto
+                padding: 20px
+                .contact__logo
+                    width: 30%
+                    margin-bottom: 10px
+            .contact__form
+                width: 40%
+                max-width: 40vw
