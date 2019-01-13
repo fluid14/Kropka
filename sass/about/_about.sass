@@ -1,0 +1,28 @@
+.about
+    +section-with-text()
+    margin-bottom: 30px
+    &__all-text-container
+        display: flex
+        flex-direction: column
+        .about__text-img-container
+            display: flex
+            flex-direction: column
+            margin: 0 auto
+            .about__text
+                max-width: 80vw
+                margin: 0 auto
+            .about__image
+                width: 40%
+                margin: 20px auto
+    
+
+
+@media screen and (min-width: $sm-min)
+    .about
+        &__all-text-container
+            flex-direction: row
+            max-width: 80vw
+            margin: 0 auto
+            .about__text-img-container
+                max-width: 20vw
+

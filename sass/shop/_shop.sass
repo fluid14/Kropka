@@ -1,0 +1,51 @@
+.shop
+    text-align: center
+    padding-bottom: 0
+    &__adres-container
+        display: flex
+        flex-direction: column
+        .shop__adres-box
+            width: 100%
+            margin: 0 auto 10px auto
+            padding: 20px
+            border: 2px solid $second-color
+            color: grey
+            cursor: pointer
+            &:hover
+                background-color: $second-color
+                color: $color-font-header
+            .shop__adres,
+            .shop__hours
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                margin: 5px 0
+                p
+                    line-height: 130%
+    &__map
+        width: 100%
+        height: 50vh
+        margin-top: 30px
+
+
+@media screen and (min-width: 532px)
+    .shop
+        &__adres-container
+            flex-direction: row
+            max-width: 100%
+            margin: 0 auto
+            justify-content: center
+            .shop__adres-box
+                min-width: 40%
+                margin: 0 10px
+
+@media screen and (min-width: $sm-min)
+    .shop
+        &__adres-container
+            max-width: 80%
+
+@media screen and (min-width: $lg-min)
+    .shop
+        &__adres-container
+            margin-top: 40px
+            

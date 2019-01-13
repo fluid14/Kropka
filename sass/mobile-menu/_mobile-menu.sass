@@ -1,0 +1,26 @@
+.mobile-menu
+    position: fixed
+    top: 0
+    left: -100%
+    width: 100vw
+    height: 100vh
+    padding: 70px 30px
+    background-color: $second-color
+    z-index: 1
+    transition: .5s ease
+    &.is-active
+        left: 0
+    &__menu
+        .mobile-menu__list
+            list-style: none
+            .mobile-menu__list-item
+                text-decoration: none
+                color: $color-font-second
+                font-family: $header-font
+                line-height: 130%
+                font-weight: regular
+                font-size: 30px
+
+@media screen and (min-width: $md-min)
+    .mobile-menu
+        display: none

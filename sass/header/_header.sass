@@ -1,0 +1,119 @@
+.header
+    width: 100%
+    height: 80vh
+    color: $color-font-header
+    background-image: linear-gradient(to top, #fce38a, #f38181), linear-gradient(to bottom, #fce38a, #fce38a)
+    text-align: center
+    font-family: $header-font
+    overflow: hidden
+    &__nav
+        position: fixed
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        height: 10vh
+        max-height: 60px
+        padding: 0 20px
+        z-index: 10
+        transition: .4s linear
+        .header__menu-desktop
+            display: none
+        .header__logo
+            height: 30%
+        .header__burger
+            display: flex
+            flex-direction: column
+            justify-content: center
+            height: 6vw
+            width: 7vw
+            max-width: 25px
+            overflow: hidden
+            .header__inner
+                display: block
+                width: 100%
+                height: 2px
+                margin: 1.5px
+                background-color: #fff
+            &.is-active .header__inner2
+                animation: main-inner-anim .3s linear both
+            &.is-active .header__inner1
+                animation: after-inner-anim .3s linear both
+            &.is-active .header__inner3
+                animation: before-inner-anim .3s linear both
+    &__paragraf
+        position: relative
+        top: 30%
+        font-family: $decor-font
+    &__h1
+        position: relative
+        top: 30%
+        font-family: $header-font
+        text-transform: uppercase
+        font-size: 45px
+    &__decor
+        +decor(35%, $color-font-header)
+    &__learn-more
+        position: relative
+        top: 55%
+        font-size: 30px
+        animation: arrow-anim 2s linear infinite
+        a
+            text-decoration: none
+            color: $color-font-header
+
+// Max 767px and landscape
+@media screen and (max-width: $sm-min) and (orientation: landscape)
+    .header
+        &__nav
+            height: 12vh
+        &__learn-more
+            top: 45%
+
+// Max 1023px and landscape
+@media screen and (max-width: $md-min) and (orientation: landscape)
+    .header
+        &__learn-more
+            top: 32%
+
+// 768px
+@media screen and (min-width: $sm-min)
+    .header
+        &__paragraf
+            font-size: 30px
+        &__h1
+            font-size: 65px
+
+// 1024px
+@media screen and (min-width: $md-min)
+    .header
+        &__nav
+            justify-content: space-around
+            padding: 0 50px
+            .header__logo
+                height: 45%
+            .header__burger
+                display: none
+            .header__menu-desktop
+                display: block
+                margin: 0 40px
+                .header__list
+                    display: inline-block
+                    margin: 0 15px
+                    &-item
+                        text-decoration: none
+                        color: $color-font-header
+                        font-family: $header-font
+                        transition: .6s linear
+                        &::after
+                            content: ''
+                            display: block
+                            position: relative
+                            top: 10px
+                            background-color: #fff
+                            width: 0
+                            height: 1px
+                            transition: .3s ease
+                        &:hover::after
+                            width: 100%
+                            

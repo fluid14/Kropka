@@ -1,0 +1,39 @@
+.contact
+    width: 100%
+    text-align: center
+    color: $color-font-second
+    background-color: $second-color
+    &__decor
+        +decor(0, #fff)
+    &__details
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        height: 50%
+        width: 100%
+        padding: 20px
+        border: 2px solid white
+        .contact__social
+            display: flex
+            flex-direction: row
+            margin-bottom: 20px
+        a
+            width: 50%
+            text-decoration: none
+            color: $color-font-second
+            .contact__facebook
+                width: 43%
+            .contact__logo-social
+                transition: .2s linear
+            &:hover .contact__logo-social
+                transform: scale(1.05)
+            .contact__allegro
+                width: 40%
+    p
+        line-height: 130%
+
+
+@media screen and (min-width: $md-min)
+    .contact
+        &__details
+            border: none
