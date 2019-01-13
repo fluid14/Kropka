@@ -425,7 +425,6 @@ p {
   font-family: "Roboto", sans-serif;
   text-align: center;
   color: #000;
-  margin-bottom: 30px;
 }
 
 .about__all-text-container {
@@ -446,7 +445,11 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.about__all-text-container .about__text-img-container .about__h2 {
+  margin: 20px 0;
 }
 
 .about__all-text-container .about__text-img-container .about__text {
@@ -456,19 +459,30 @@ p {
 
 .about__all-text-container .about__text-img-container .about__image {
   width: 40%;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 639px) {
   .about__all-text-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    max-width: 80vw;
+    max-width: 95vw;
     margin: 0 auto;
   }
   .about__all-text-container .about__text-img-container {
+    margin: 0 auto;
+    max-width: 27vw;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .about__all-text-container {
+    max-width: 80vw;
+  }
+  .about__all-text-container .about__text-img-container {
+    margin-bottom: 30px;
     max-width: 20vw;
   }
 }
