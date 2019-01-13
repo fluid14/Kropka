@@ -1,2 +1,38 @@
 .balloon
     +section-with-text()
+    padding-bottom: 0
+    &__all-text-container
+        display: flex
+        flex-direction: column
+        .balloon__text-img-container
+            display: flex
+            flex-direction: column
+            margin: 20px auto
+            .balloon__h2
+                margin: 20px 0
+            .balloon__text
+                max-width: 80vw
+                margin: 0 auto
+            .balloon__image
+                width: 40%
+                margin: 0 auto
+    
+
+@media screen and (min-width: 639px) 
+    .balloon
+        &__all-text-container
+            flex-direction: row
+            max-width: 95vw
+            margin: 0 auto
+            .balloon__text-img-container
+                margin: 0 auto
+                max-width: 27vw
+
+@media screen and (min-width: $sm-min)
+    .balloon
+        &__all-text-container
+            max-width: 80vw
+            .balloon__text-img-container
+                margin-bottom: 30px
+                max-width: 20vw
+
