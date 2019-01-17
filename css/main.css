@@ -198,7 +198,7 @@ p {
 
 .header {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   color: #fff;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#fce38a), to(#f38181)), -webkit-gradient(linear, left top, left bottom, from(#fce38a), to(#fce38a));
   background-image: linear-gradient(to top, #fce38a, #f38181), linear-gradient(to bottom, #fce38a, #fce38a);
@@ -493,16 +493,34 @@ p {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   background-color: #f8f8f8;
   overflow: hidden;
   padding: 0;
 }
 
 .cooperation__logo {
-  width: 10%;
+  width: 15%;
+  height: 30%;
   margin: 10px 0;
+}
+
+.cooperation__logo:nth-child(4), .cooperation__logo:nth-child(5) {
+  display: none;
+}
+
+@media screen and (min-width: 533px) {
+  .cooperation__logo {
+    width: 10%;
+    height: 50%;
+  }
+  .cooperation__logo:nth-child(4), .cooperation__logo:nth-child(5) {
+    display: block;
+  }
 }
 
 .balloon {
@@ -596,9 +614,19 @@ p {
   border: 2px solid #95e1d3;
   color: grey;
   cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
-.shop__adres-container .shop__adres-box:hover {
+.shop__adres-container .shop__adres-box .shop__telephone {
+  text-decoration: none;
+  color: grey;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.shop__adres-container .shop__adres-box:hover,
+.shop__adres-container .shop__adres-box:hover .shop__telephone {
   background-color: #95e1d3;
   color: #fff;
 }
@@ -695,6 +723,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 auto;
 }
 
 .contact__container .contact__details {
@@ -719,7 +748,7 @@ p {
 }
 
 .contact__container .contact__details .contact__logo {
-  width: 50%;
+  width: 40%;
   margin-bottom: 10px;
 }
 
@@ -766,6 +795,14 @@ p {
   text-transform: uppercase;
   color: #fff;
   border: 2px solid #fff;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  cursor: pointer;
+}
+
+.contact__container .contact__form .contact__submit:hover {
+  color: #95e1d3;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 767px) {
@@ -774,20 +811,20 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    max-width: 80vw;
   }
   .contact__container .contact__details {
-    width: 40%;
-    max-width: 40vw;
-    margin: 10px auto 0 auto;
+    width: 40vw;
+    margin: 10px;
     padding: 20px;
   }
   .contact__container .contact__details .contact__logo {
-    width: 30%;
+    width: 40%;
     margin-bottom: 10px;
   }
   .contact__container .contact__form {
-    width: 40%;
-    max-width: 40vw;
+    width: 40vw;
+    margin: 0 10px;
   }
 }
 

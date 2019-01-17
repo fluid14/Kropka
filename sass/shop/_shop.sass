@@ -9,9 +9,15 @@
             margin: 0 auto 10px auto
             padding: 20px
             border: 2px solid $second-color
-            color: grey
+            color: $color-font-third
             cursor: pointer
-            &:hover
+            transition: .3s ease 
+            .shop__telephone
+                text-decoration: none
+                color: $color-font-third
+                transition: .3s ease
+            &:hover,
+            &:hover .shop__telephone
                 background-color: $second-color
                 color: $color-font-header
             .shop__adres,

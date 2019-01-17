@@ -3,6 +3,7 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const mobileMenuAllItems = document.querySelectorAll('.mobile-menu__menu a');
 const header = document.querySelector('.header');
 const headerNav = document.querySelector('.header__nav');
+const allItems = document.querySelectorAll('.header ~ section');
 const shops = document.querySelectorAll('.shop__adres-box');
 
 
@@ -23,6 +24,10 @@ window.addEventListener('scroll', () => {
         headerNav.style.backgroundColor = 'transparent';
     }
 })
+
+
+
+
 
 // Scroll smooth
 $('a[href^="#"]').on('click', function (event) {
