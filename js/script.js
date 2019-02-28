@@ -5,6 +5,7 @@ const header = document.querySelector('.header');
 const headerNav = document.querySelector('.header__nav');
 const allItems = document.querySelectorAll('.header ~ section');
 const shops = document.querySelectorAll('.shop__adres-box');
+const allItemAnim = document.querySelectorAll('header ~ *');
 
 
 const mobileMenuActive = () => {
@@ -24,10 +25,6 @@ window.addEventListener('scroll', () => {
         headerNav.style.backgroundColor = 'transparent';
     }
 })
-
-
-
-
 
 // Scroll smooth
 $('a[href^="#"]').on('click', function (event) {

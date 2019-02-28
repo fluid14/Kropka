@@ -2,7 +2,7 @@
     width: 100%
     height: 100vh
     color: $color-font-header
-    background-image: linear-gradient(to top, #fce38a, #f38181), linear-gradient(to bottom, #fce38a, #fce38a)
+    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.5), rgb(243, 129, 129)), linear-gradient(to bottom, rgba(252, 227, 138, 0.5), rgba(252, 227, 138, 0.5)), url("../images/header.jpg")
     text-align: center
     font-family: $header-font
     overflow: hidden
@@ -19,8 +19,11 @@
         transition: .4s linear
         .header__menu-desktop
             display: none
-        .header__logo
-            height: 30%
+        .header__logo-item
+            display: inline-block
+            height: 40%
+            .header__logo
+                height: 100%
         .header__burger
             display: flex
             flex-direction: column
@@ -97,6 +100,7 @@
             .header__menu-desktop
                 display: block
                 margin-left: 40px
+                // color: white
                 .header__list
                     display: inline-block
                     margin: 0 15px

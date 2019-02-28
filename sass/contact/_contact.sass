@@ -35,19 +35,26 @@
             .contact__input
                 display: block
                 width: 100%
-                height: 20px
+                height: 30px
                 margin: 10px 0
                 border: 0 
                 padding: 5px
-                border-radius: 1px
-                &:focus
-                    border: none
+                border: none
+                border-bottom: 2px solid #fff
+                background: none
+                color: #fff
+                transition: .4s 
                 &-text
                     width: 100%
                     height: 150px
                     margin-bottom: 20px
-                    &:focus
-                        border: none
+            .contact__input:focus
+                outline: none
+                border: 2px solid #fff
+            .contact__input::placeholder
+                color: #fff
+                font-size: .8rem
+                font-family: $main-font
             .contact__submit
                 width: 50%
                 height: 30px

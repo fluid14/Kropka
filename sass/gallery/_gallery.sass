@@ -1,0 +1,56 @@
+.gallery
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 0
+    &__img-bgc
+        width: 80vw
+        height: 75vh
+        max-height: 500px
+        margin: 0 20px
+        background-color: $second-color
+        .gallery__img
+            height: 100%
+            background: url("../images/test.jpg") no-repeat
+            background-size: cover
+    &__img-bgc:nth-child(2)
+        margin: 30px 0
+
+@media screen and (orientation: landscape)
+    .gallery
+        flex-direction: row
+        &__img-bgc
+            width: 25vw
+            max-width: 200px
+            height: 65vh
+            max-height: 300px
+
+            
+// // 768px
+@media screen and (min-width: $sm-min)
+    .gallery
+        flex-direction: row
+        &__img-bgc
+            width: 25vw
+            height: 65vh
+            min-height: 300px
+            max-height: 330px
+            margin: 0 50px
+            .gallery__img
+                transition: .4s ease
+                &:hover
+                    transform: translate(-7%, -5%)
+   
+
+// // 1024px
+@media screen and (min-width: $md-min)
+    .gallery
+        &__img-bgc
+            width: 25vw
+            max-width: 200px
+            height: 65vh
+            max-height: 300px
+            .gallery__img
+            
+    

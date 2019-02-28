@@ -8,7 +8,7 @@
     overflow: hidden
     padding: 0
     &__logo
-        width: 15%
+        width: 20%
         height: 30%
         margin: 10px 0
         &:nth-child(4),
@@ -19,7 +19,27 @@
     .cooperation
         &__logo
             width: 10%
-            height: 50%
+            height: 40%
             &:nth-child(4),
             &:nth-child(5)
                 display: block
+
+@media screen and (min-width: 768px)
+    .cooperation
+        &__logo
+            width: 15%
+            height: 25%
+
+@media screen and (min-width: 1024px)
+    .cooperation
+        &__logo
+            width: 8%
+            min-width: 150px
+            height: 45%
+
+@media screen and (min-width: 1366px)
+    .cooperation
+        &__logo
+            width: 8%
+            min-width: 150px
+            height: 35%
